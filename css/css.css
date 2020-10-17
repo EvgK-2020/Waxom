@@ -1,0 +1,62 @@
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+.wrp {
+  width: 1230px;
+  margin: 0 auto;
+}
+.header {
+  width: 1920px;
+  height: 100vh;
+  max-height: 1024px;
+  background-image: url(../img/bg_photo_header.jpg);
+  color: #fff;
+}
+.header-nav-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 55px 30px;
+  list-style: none;
+  text-transform: capitalize;
+  line-height: 24px;
+}
+.header-nav-list-item-logo {
+  margin-left: 70px;
+  margin-right: 220px;
+  position: relative;
+}
+.header-nav-list-item-logo:before {
+  width: 64px;
+  height: 56px;
+  position: absolute;
+  top: -28px;
+  left: -70px;
+  content: "";
+  background: url("../img/logo_waxom.png") no-repeat;
+  background-position: center center;
+}
+.header-nav-list-item-link {
+  color: #fff;
+  text-decoration: none;
+}
+.header-nav-list-item-link-pic {
+  margin-left: 70px;
+}
+.header-nav-list-item-link:hover {
+  color: #998675;
+}
+.header-nav-list-item-link:active {
+  color: #998675;
+}
+.active {
+  color: #998675;
+}
+.direction {
+  background-color: #fff;
+}
+.ideas {
+  background-color: #fbfaf8;
+}

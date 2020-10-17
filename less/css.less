@@ -1,0 +1,90 @@
+@color-white:#fff;
+@color-white-dark:#fbfaf8;
+@color-brown:#998675;
+
+@color-hover:@color-brown;
+@color-active:@color-brown;
+
+@whidth:1230px;
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+
+.wrp {
+    width: @whidth;
+    margin: 0 auto;
+}
+
+.header {
+    width: 1920px;
+    height: 100vh;
+    max-height: 1024px;
+    background-image: url(../img/bg_photo_header.jpg);
+    color:@color-white;
+
+    &-nav {
+
+        &-list {
+            display: flex;
+            justify-content: space-between;
+            padding: 55px 30px;
+            list-style: none;
+            text-transform: capitalize;
+            line-height: 24px;
+
+            &-item {
+
+                &-logo{
+                    margin-left:70px;
+                    margin-right: 220px;
+                    position: relative;
+                }
+
+                &-logo:before {
+                    width: 64px;
+                    height: 56px;
+                    position: absolute;
+                    top:-28px;
+                    left: -70px;
+                    content: "";
+                    background: url("../img/logo_waxom.png") no-repeat;
+                    background-position: center center;
+                }
+
+                &-link {
+                    color: @color-white;
+                    text-decoration: none;
+                
+                    &-pic {
+                        margin-left: 70px;
+                    }
+                }
+
+                &-link:hover {
+                    color:@color-active;
+                }
+
+                &-link:active {
+                    color:@color-hover;
+                }
+
+            }    
+        }
+    }
+}
+
+.active{
+    color: @color-active;
+}
+
+.direction {
+    background-color: @color-white;
+}
+
+.ideas{
+    background-color: @color-white-dark;
+}
