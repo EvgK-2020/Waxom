@@ -14,12 +14,20 @@
 
 @color-white:#fff;
 @color-white-dark:#fbfaf8;
+@color-grey-light:#9a9a9a;
 @color-brown:#998675;
 
 @color-hover:@color-brown;
 @color-active:@color-brown;
 
 @whidth:1230px;
+
+.text(@font-size,@line-height,@font-weight) {
+    font-size:@font-size;
+    line-height:@line-height;
+    font-weight:@font-weight;
+}
+
 
 .container {
     max-width: 1920px;
@@ -45,39 +53,37 @@
         &-list {
             display: flex;
             justify-content: space-between;
-            padding: 55px 30px;
+            padding: 40px 30px;
             list-style: none;
             text-transform: capitalize;
-            line-height: 24px;
+            align-items: center;
 
             &-item {
 
                 &-logo{
-                    margin-left:70px;
-                    margin-right: 220px;
-                    position: relative;
-                }
-
-                &-logo:before {
-                    width: 64px;
-                    height: 56px;
-                    position: absolute;
-                    top:-28px;
-                    left: -70px;
-                    content: "";
-                    background: url("../img/logo_waxom.png") no-repeat;
-                    background-position: center center;
+                    margin-right: 190px;
                 }
 
                 &-link {
                     color: @color-white;
                     text-decoration: none;
-                
-                    &-pic {
-                        margin-left: 70px;
+                    .text(14px, 1.2, 300);
+                    
+                    &-logo {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-family: 'Raleway';
+                        .text(34px, 1.2, 400);
+                        letter-spacing: -0.04em;
                     }
-                }
 
+                    &-svg {
+                        fill: currentColor;
+                    }                    
+                
+                }
+                
                 &-link:hover {
                     color:@color-active;
                 }
@@ -86,9 +92,107 @@
                     color:@color-hover;
                 }
 
+                &-pic {
+                    margin-left: 35px;
+                }
+
+
             }    
         }
     }
+
+    &-slider {
+        width: 1620px;
+        margin: 0 auto;
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-end;
+        min-height: calc(100% - 135px);
+
+        &-wrapper {
+            display: flex;
+            width: 1620px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-arrow {
+            fill: @color-grey-light;
+        }
+
+        &-arrow:hover {
+            fill: @color-brown;
+        }        
+
+        &-content {
+            text-align: center;
+            width: 590px;
+
+            &-top-text {
+                .text(36px, 1.2, 500);
+                font-family: Raleway;
+            }
+
+            &-title {
+                .text(52px, 1.2, 800);
+                font-family: Raleway;
+                margin-bottom: 10px;
+            }
+
+            &-text {
+                .text(16px, 24px, 300);
+            }
+
+            &-button {
+                display: block;
+                .text(14px, 23px, 800);
+                font-family: Raleway;
+                text-transform: uppercase;
+                color: @color-white;
+                text-decoration: none;
+                margin-top: 50px;
+                padding: 20px 40px;
+                background-color: @color-brown;
+
+            }
+        }
+
+
+        &-nav {
+            width: 100%;
+
+            &-list{
+                display: flex;
+                list-style: none;
+                justify-content: center;
+
+                &-item {
+                    margin: 0 5px 45px 5px;
+
+                    &-link {
+                        border:none;
+                        background-color: @color-grey-light;
+                        width: 12px;
+                        height: 12px;
+                        border-radius: 50%;
+                        display: block;
+
+                        &-act {
+                            border:2px solid @color-brown;
+                            background-color: transparent;
+                        }
+                    }
+                    &-link:hover {
+                        border:2px solid @color-brown;
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 .active{
