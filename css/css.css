@@ -10,6 +10,12 @@
   font-weight: 300;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto.woff2') format('woff2'), url('../fonts/roboto.woff') format('woff'), url('../fonts/roboto.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -612,4 +618,173 @@
   height: 2px;
   background-color: #fff;
   margin: 30px auto;
+}
+.recent {
+  padding: 80px 0;
+  text-align: center;
+}
+.recent-title {
+  font-size: 30px;
+  line-height: 1.2;
+  font-weight: 600;
+  font-family: Raleway;
+  color: #555555;
+  margin-bottom: 30px;
+  min-width: 757px;
+}
+.recent-text {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #8c8c8c;
+  margin: 0 auto 40px;
+  max-width: 757px;
+}
+.recent-list {
+  display: flex;
+  max-width: 1170px;
+  justify-content: space-between;
+  margin: 0 auto 40px auto;
+}
+.recent-list-item {
+  list-style-type: none;
+  width: 31%;
+}
+.recent-list-item-article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #f8f8f8;
+  position: relative;
+}
+.recent-list-item-article-wrp {
+  padding: 30px 30px 35px 30px;
+  text-align: left;
+}
+.recent-list-item-article-title {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: Raleway;
+  color: #555555;
+  margin-bottom: 20px;
+}
+.recent-list-item-article-text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #8c8c8c;
+}
+.recent-list-item-article-link {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #c7b299;
+  padding-top: 30px;
+  text-decoration: none;
+}
+.recent-list-item-article-date-wrp {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  left: 20px;
+  top: 20px;
+}
+.recent-list-item-article-date-wrp-day {
+  background-color: #363636;
+  font-size: 30px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #fff;
+  padding: 8px 8px 10px 8px;
+  border-radius: 3px 3px 0px 0px;
+}
+.recent-list-item-article-date-wrp-month {
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: Roboto;
+  color: #fff;
+  border-radius: 0px 0px 3px 3px;
+  background-color: #252525;
+  padding: 5px 0;
+}
+.recent-list-item-article-nav-for-img {
+  width: 100%;
+  position: absolute;
+  top: 180px;
+}
+.recent-list-item-article-nav-for-img-list {
+  display: flex;
+  justify-content: space-between;
+  max-width: 100px;
+  margin: 0 auto;
+  list-style: none;
+}
+.recent-list-item-article-nav-for-img-list-item-link {
+  border: 5px solid transparent;
+  background-color: #9a9a9a;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+}
+.recent-list-item-article-nav-for-img-list-item-link-act {
+  border: 1px solid #998675;
+  background-color: transparent;
+  transform: scale(1.4);
+}
+.recent-list-item-article-nav-for-img-list-item-link:hover {
+  border: 1px solid #998675;
+  background-color: transparent;
+  transform: scale(1.4);
+}
+.recent-list-item-article:hover .recent-list-item-article-img {
+  filter: brightness(40%);
+}
+.recent-list-item-article:hover .recent-list-item-article-wrp {
+  background-color: #362f2d;
+}
+.recent-list-item-article:hover .recent-list-item-article-title {
+  color: #c7b299;
+}
+.recent-list-item-article:hover .recent-list-item-article-text {
+  color: #fff;
+}
+.recent-list-item-article:hover .recent-list-item-article-date-wrp-day {
+  background-color: #c7b299;
+}
+.recent-list-item-article:hover .recent-list-item-article-date-wrp-month {
+  background-color: #a48d72;
+}
+.recent-button-wrp {
+  display: flex;
+  justify-content: space-between;
+  max-width: 60px;
+  margin: 0 auto;
+}
+.recent-button-link {
+  fill: #d1d1d1;
+}
+.recent-button-link:hover,
+.recent-button-link:focus,
+.recent-button-link:active {
+  fill: #c7b299;
+}
+.logo {
+  width: 100%;
+  background-image: url(../img/bg_photo_logo.jpg);
+  padding: 140px 0;
+}
+.logo-nav {
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.logo-nav-link {
+  text-decoration: none;
 }
