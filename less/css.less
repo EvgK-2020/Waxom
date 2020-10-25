@@ -1,23 +1,4 @@
-@font-face {
-    font-family: 'Raleway';
-    src: local('Raleway Regular'), local('Raleway-Regular'), url('../fonts/ralewayregular.woff2') format('woff2'), url('../fonts/ralewayregular.woff') format('woff'), url('../fonts/ralewayregular.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.otf') format('otf'), url('../fonts/Montserrat-Regular.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: local('Roboto'), local('Roboto-Regular'), url('../fonts/roboto.woff2') format('woff2'), url('../fonts/roboto.woff') format('woff'), url('../fonts/roboto.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url("font.css");
 
 @color-white:#fff;
 @color-fbfaf8:#fbfaf8;
@@ -183,7 +164,9 @@
             fill: @color-grey-light;
         }
 
-        &-arrow:hover {
+        &-arrow:hover,
+        &-arrow:active,
+        &-arrow:focus {
             fill: @color-brown;
         }        
 
@@ -211,7 +194,9 @@
                 margin-top: 50px;
                 padding: 20px 40px;
             }
-            &-button:hover {
+            &-button:hover,
+            &-button:active,
+            &-button:focus {
                 .button-hover();
             }
 
@@ -244,7 +229,9 @@
                         transform: scale(1.2);
                     }
                 }
-                &-link:hover {
+                &-link:hover,
+                &-link:active,
+                &-link:focus {
                     border:2px solid @color-brown;
                     background-color: transparent;
                     transform: scale(1.2);
@@ -394,6 +381,7 @@
             }
 
             &-link:hover,
+            &-link:active,
             &-link:focus {
                 color: @color-white;
             }
@@ -414,7 +402,9 @@
         padding: 15px 30px;
     }        
 
-    &-button:hover {
+    &-button:hover,
+    &-button:active,
+    &-button:focus {
         .button-hover(3px);
     }
 }
@@ -638,7 +628,9 @@
             fill:#ffffff;
         }
 
-        &-img:hover {
+        &-img:hover,
+        &-img:active,
+        &-img:focus {
             fill:@color-brown;
         }
     }
@@ -845,7 +837,9 @@
                                     
                                 }
                             }
-                            &-link:hover {
+                            &-link:hover,       
+                            &-link:active,
+                            &-link:focus {
                                 border:1px solid @color-brown;
                                 background-color: transparent;
                                 transform: scale(1.4);
@@ -1017,8 +1011,8 @@
                 }       
 
                 &-link:hover,
-                &-active,
-                &-focus {
+                &-link:active,
+                &-link:focus {
                     .footer-content-list-item-text-data {
                         color: @color-white;
                     }
