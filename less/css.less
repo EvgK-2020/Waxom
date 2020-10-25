@@ -90,6 +90,7 @@
     
 
     &-nav {
+        max-width: @width;
 
         &-list {
             display: flex;
@@ -103,7 +104,7 @@
             &-item {
 
                 &-logo{
-                    margin-right: 190px;
+                    // margin-right: 190px;
                 }
 
                 &-link {
@@ -136,10 +137,14 @@
                 &-pic {
                     margin-left: 35px;
                 }
+            }  
+            
+            &-item-margin-left {
+                margin-left: 15%;
+            }
 
-
-            }    
         }
+
     }
 
     &-slider {
@@ -248,10 +253,14 @@
 
 .direction {
     background-color: @color-white;
-    display: flex;
-    justify-content: space-between;
-    // margin: 80px auto;
     padding: 80px 0;
+
+    &-wrp {
+        max-width: @width;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
     
     &-list {
         display:flex;
@@ -259,7 +268,7 @@
         list-style: none;
 
         &-item {
-            max-width: 266px;
+            width: 23%;
             text-align: center;
 
             &-svg {
@@ -308,6 +317,11 @@
     background-color: @color-fbfaf8;
     text-align: center;
 
+    &-wrp {
+        max-width: @width;
+        margin: 0 auto;
+    }
+
     &-title {
         .text(30px, 1.2, 600);
         font-family: Raleway;
@@ -325,8 +339,9 @@
 
     &-printscreen {
         position: relative;
-        margin-top: 102px;
-        height: 485px;
+        margin-top: 45px;
+        height: 482px;
+        width: 100%;
 
         &-img {
             position: absolute;
@@ -334,6 +349,7 @@
 
         &-img:nth-child(1) {
             left: -25px;
+            top: 82px;
         }
 
         &-img:nth-child(1):hover, &-img:nth-child(2):hover, &-img:nth-child(3):hover {
@@ -342,11 +358,12 @@
 
         &-img:nth-child(2) {
             right: -25px;
+            top: 82px;
         }
 
         &-img:nth-child(3) {
-            left: 230px;
-            top: -82px;
+             left: 230px;
+            // top: -82px;
         }
 
     }
@@ -357,7 +374,7 @@
     width: 100%;
 
     &-wrp {
-        width: @width;
+        max-width: @width;
         margin: 0 auto;
         padding: 45px 0;
         display:flex;
@@ -412,6 +429,13 @@
 .projects {
     background-color: @color-white;
     padding: 80px 0;
+    width: 100%;
+    text-align: center;
+
+    &-wrp {
+        max-width: @width;
+        margin: 0 auto;
+    }
 
     &-title {
         .text(30px, 1.2, 600);
@@ -449,6 +473,12 @@
                     border: 1px solid @color-ebebeb;
                     border-radius: 3px;
                     padding: 5px 20px;
+                    
+                    &-active {
+                        background-color: @color-brown;
+                        color: @color-white;
+                        border: 1px solid @color-ebebeb;                        
+                    }
                 }
 
                 &-button:hover,
@@ -690,7 +720,7 @@
 
         &-item {
             list-style-type: none;
-            width: 15%;
+            width: 17%;
 
             &-svg {
                 fill:@color-c7b299;
