@@ -91,40 +91,55 @@
 
     &-nav {
         max-width: @width;
+        width: 100%;
+        display:flex;
+        justify-content: space-between;
+        padding-top: 40px;
 
+        &-logo {
+            margin-right: 30px;
+            &-link {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: @color-white;
+                font-family: 'Raleway';
+                .text(34px, 1.2, 400);
+                letter-spacing: -0.04em; 
+                text-transform: capitalize;  
+                text-decoration: none;     
+
+                &-svg {
+                    fill: currentColor;
+                }                 
+            }
+
+            &-link:hover,
+            &-link:active,
+            &-link:focus {
+                color:@color-hover;
+            }            
+
+        }
+ 
         &-list {
             display: flex;
             justify-content: space-between;
-            padding-top: 40px;
             list-style: none;
             text-transform: capitalize;
             align-items: center;
+            flex-wrap: wrap;
             
-
             &-item {
-
-                &-logo{
-                    // margin-right: 190px;
-                }
-
+                margin-right: 25px;
                 &-link {
                     color: @color-white;
                     text-decoration: none;
                     .text(14px, 1.2, 300);
-                    
-                    &-logo {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        font-family: 'Raleway';
-                        .text(34px, 1.2, 400);
-                        letter-spacing: -0.04em;
-                    }
 
                     &-svg {
                         fill: currentColor;
-                    }                    
-                
+                    }
                 }
                 
                 &-link:hover,
@@ -132,17 +147,11 @@
                 &-link:focus {
                     color:@color-hover;
                 }
-
-
-                &-pic {
-                    margin-left: 35px;
-                }
             }  
-            
-            &-item-margin-left {
-                margin-left: 15%;
-            }
-
+        }
+        &-list-menu {
+            margin-left: auto;
+            margin-right: 35px;
         }
 
     }
@@ -759,8 +768,9 @@
         .text(30px, 1.2, 600);
         font-family: Raleway;
         color: @color-grey-555555;
-        margin-bottom: 30px;
-        min-width: 757px;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        
     }
 
     &-text {
@@ -1173,4 +1183,130 @@
 
     }
 
+}
+
+
+@media (max-width: 576px) { 
+    .header {
+        height: 140px;
+
+        &-nav {
+            padding-left: 30px;
+
+            &-list-menu {
+                display: none;
+            }
+        }
+
+        &-slider, &-nav-for-slider {
+            display: none;
+        }
+
+    }
+
+    .direction {
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        &-list {
+        flex-wrap: wrap;
+        
+            &-item {
+                width: 45%;
+            }
+        }
+    }
+    
+    
+    .ideas, .purchase {
+        display: none;
+    }
+
+    .projects {
+        padding-top: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        &-nav-list {
+            flex-wrap: wrap;
+
+            &-item {
+                margin-bottom: 10px;
+            }
+        }
+
+        &-list {
+            justify-content: center;
+        }
+    }
+
+    .presentation {
+        display: none;
+    }
+
+    .excelent {
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        &-image {
+            height:280px;
+            align-self: flex-end;
+        }
+    }
+
+    .statistics {
+        &-list {
+            flex-wrap: wrap;
+            
+            &-item {
+                width: 40%;
+            }
+        }
+    }
+
+    .recent {
+        padding-bottom: 0;
+        &-list {
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &-item {
+                width: 80%;
+            }
+        }
+
+        &-button-wrp {
+            display: none;
+        }
+    }
+
+    .logo {
+        height: 229px;
+
+        &-nav-link-img {
+           width: 80px;
+           height: auto;
+       } 
+    }
+
+
+    .footer {
+        &-content {
+            display: none;;
+        }
+
+        &-bottom-wrp {
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
+
+        &-bottom-list {
+            width: 80%;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+    }
+ 
 }
